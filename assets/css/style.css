@@ -29,10 +29,14 @@ body::before {
   z-index: -1;
 }
 
-@media (min-width: 1024px) {
+@media only screen and (max-width: 500px) {
   body::before {
-    background-attachment: fixed;
+    background: none;
   }
+}
+body {
+  background: #040404 url("../img/bg-mobile.jpg") bottom right no-repeat;
+  background-size: contain;
 }
 
 a {
@@ -215,7 +219,7 @@ h6 {
   position: relative;
 }
 
-.navbar li+li {
+.navbar li + li {
   margin-left: 30px;
 }
 
@@ -254,7 +258,7 @@ h6 {
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 25px;
@@ -263,7 +267,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -283,12 +287,21 @@ h6 {
 }
 
 @media (max-width: 991px) {
-  .mobile-nav-toggle {
+  /* .mobile-nav-toggle {
     display: block;
+  } */
+
+  #header {
+    align-items: flex-start;
+    padding-top: 150px;
+  }
+  .navbar ul {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .navbar ul {
-    display: none;
+  .navbar li + li {
+    margin-left: 20px;
   }
 }
 
@@ -328,7 +341,7 @@ h6 {
   padding: 12px 20px;
 }
 
-.navbar-mobile li+li {
+.navbar-mobile li + li {
   margin: 0;
 }
 
@@ -969,7 +982,7 @@ section .container {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1066,7 +1079,7 @@ section .container {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1134,7 +1147,7 @@ section .container {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #18d26e;
   border: 0;
   padding: 10px 30px;
@@ -1143,7 +1156,7 @@ section .container {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #15bb62;
 }
 
