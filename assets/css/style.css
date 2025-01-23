@@ -302,10 +302,12 @@ h6 {
   .navbar ul {
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
   }
 
   .navbar li + li {
-    margin-left:10px;
+    margin-left:0;
   }
 }
 
