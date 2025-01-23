@@ -292,8 +292,12 @@ h6 {
   } */
 
   #header {
-    align-items: flex-start;
-    padding-top: 150px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #header.header-top h1{
+    display: none;
   }
   .navbar ul {
     display: flex;
@@ -301,7 +305,7 @@ h6 {
   }
 
   .navbar li + li {
-    margin-left: 20px;
+    margin-left:15px;
   }
 }
 
